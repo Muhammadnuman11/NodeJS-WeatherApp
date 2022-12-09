@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Piazzolla:opsz,wght@8..30,200;8..30,400;8..30,500;8..30,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Piazzolla', serif;
+}
+
+:root {
+    --main-bg: #1e272e;
+    --main-color: #0097e6;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    background-color: var(--main-bg);
+}
+
+nav a {
+    font-size: 1.8rem !important;
+}
+
+nav a:hover {
+    color: var(--main-color) !important;
+}
+
+.bi-snow3 {
+    transition: all linear;
+    animation: rotate 2s linear infinite;
+    color: var(--main-color);
+    font-size: 2.1rem;
+}
+
+/* Animation */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Main Header */
+.main-header-left {
+    height: 50rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.main-header-left p {
+    font-size: 2rem;
+}
+
+.main-header-left h1 {
+    font-size: 4rem;
+    margin: 1rem 0 4rem 0;
+    text-transform: capitalize;
+}
+
+.main-header-left h1 span {
+    color: var(--main-color);
+}
+
+.main-header-left button {
+    border: none;
+    padding: 0.8rem 1.8rem;
+    font-size: 1.4rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    box-shadow: 0 8px 6px -6px #000;
+}
+
+.main-header-left button:hover {
+    box-shadow: 0 8px 6px -6px var(--main-color);
+}
+
+.main-header-right {
+    height: 50rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.main-header-right figure img {
+    filter: drop-shadow(0 0.5rem 2rem rgba(0, 0, 0, 0.5));
+}
+
+/* Temp style */
+
+/* Temp Form */
+.tempForm {
+    width: 60%;
+    position: relative;
+    margin: 5rem auto;
+}
+
+.tempForm input[type="text"] {
+    width: 100%;
+    padding: 1.2rem 5rem 1.2rem 2rem;
+    background: #1e202b;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-size: 1.7rem;
+    border-radius: 3rem;
+}
+
+::placeholder {
+    color: #bfc1c8;
+}
+
+.tempForm input[type="submit"] {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: none;
+    background: #009ad8;
+    padding: 0 3rem;
+    color: #fff;
+    font-size: 1.6rem;
+    border-radius: 3rem;
+}
+
+.tempForm input[type="submit"]:hover {
+    color: #009ad8;
+    background: #fff;
+}
+
+/* Temp Information */
+.tempInfo {
+    width: 50%;
+    margin: auto;
+    min-height: 30rem;
+    background-color: #323544;
+    border-radius: 1rem;
+    padding: 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.topLayer {
+    width: 100%;
+    height: 20%;
+    background-color: #2d303d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.topLayer p {
+    color: #fff;
+    font-weight: 400;
+    padding: 1rem;
+    font-size: 1.6rem;
+}
+
+.mainLayer {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.mainLayer #cityName {
+    color: #bfc1c8;
+    font-weight: 300;
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+.mainLayer .middleLayer {
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+}
+
+.mainLayer .middleLayer p,
+.mainLayer .middleLayer .bi-cloud-fill {
+    font-size: 7rem;
+    font-weight: 900;
+}
+
+.bi-cloud-fill {
+    color: #f1f2f6;
+}
+
+sup {
+    font-size: 6rem;
+    margin-top: -2rem;
+}
+
+#tempStatus {
+    animation: iconAni 4s linear infinite alternate;
+}
+
+
+/* Error page style */
+.errImg img {
+    width: 50rem;
+    height: 35rem;
+}
+
+/* footer */
+footer {
+    margin-top: auto;
+    width: 100%;
+    background-color: var(--main-bg);
+}
+
+footer p {
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    line-height: 4rem;
+    font-size: 1.4rem;
+}
+
+/* Animation */
+@keyframes iconAni {
+    from {
+        transform: scale(0.9);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
+
+/* Media query */
+@media only screen and (max-width:768px) {
+    .main-header-left {
+        height: auto;
+        margin: 5rem 0;
+    }
+
+    .main-header-right {
+        height: auto;
+        margin: 3rem 0;
+    }
+
+    .tempForm {
+        width: 100%;
+    }
+
+    .tempInfo {
+        width: 100%;
+    }
+
+    .mainLayer .middleLayer p,
+    .mainLayer .middleLayer .bi-cloud-fill {
+        font-size: 5rem;
+        font-weight: 500;
+    }
+
+    sup {
+        font-size: 4rem;
+    }
+}
