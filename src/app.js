@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const hbs = require('hbs');
 const app = express();
-const port = 8000;
+const port = process.env.PORT || 8000;
 
 // For update in any file reload server every time -- Run below command in terminal with nodemon file name  Like
 // nodemon app.js -e js,hbs
